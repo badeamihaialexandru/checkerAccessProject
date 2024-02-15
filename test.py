@@ -25,6 +25,7 @@ class mysqlconn:
         self.cursor=self.database.cursor()
     
     def selectQuery(self,query):
+        self.database.commit()
         self.cursor.execute(query)
         returnable=self.cursor.fetchall()
         return returnable
