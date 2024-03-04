@@ -182,8 +182,10 @@ def run_test_two():
     t2=threading.Thread(target=test_2_aux)
     t1.start()
     t2.start()
-
+def run_test_three():
+    os.system(f'python main.py 3 "{filesPath}"')
 run_test_one()
 # run_test_two()
+run_test_three()
 
 # mydb.truncateAllTables()
